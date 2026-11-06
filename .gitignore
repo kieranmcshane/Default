@@ -1,0 +1,10 @@
+# Exports Anki (volumineux, non versionnés)
+*.apkg
+*.colpkg
+
+# Divers
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+node_modules/
