@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 .venv/
 node_modules/
+
+# Extractions locales (texte des collèges, base Anki) : régénérables par les scripts de outils/
+local/
