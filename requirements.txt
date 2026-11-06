@@ -1,0 +1,2 @@
+# Seulement pour les paquets Anki récents compressés en Zstandard.
+zstandard==0.25.0

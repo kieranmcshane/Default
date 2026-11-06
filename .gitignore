@@ -8,3 +8,11 @@ __pycache__/
 *.pyc
 .venv/
 node_modules/
+# Ne pas enregistrer vos cartes et vos sauvegardes personnelles dans Git.
+*.anki2
+*.anki21
+inventaire*.json
+inventory*.json
+sauvegarde*.json
+exports/
+dist/

@@ -16,8 +16,8 @@ récentes des référentiels des collèges d'enseignants, et le rester.
 
 | Collège | Statut |
 |---|---|
-| Pneumologie | entrées recensées (côté Codex, pas encore poussées) |
-| Neurologie | chapitres recensés (côté Codex, pas encore poussés) |
+| Pneumologie | 22 entrées recensées ; contrôle A/B implémenté, cartes réelles non auditées |
+| Neurologie | 29 chapitres recensés ; numéros à confirmer, contrôle A/B implémenté |
 | Orthopédie | à recenser |
 | Cancérologie | à recenser |
 | Néphrologie | à recenser |
@@ -47,6 +47,27 @@ ne connaît pas les derniers items.
 
 La fusion des différentes versions est reportée : il faut d'abord identifier
 quelle version contient quoi.
+
+## Système de contrôle
+
+Le système local est disponible dans `web/` ; [le mode d’emploi](docs/mode-emploi.md) détaille l’import des paquets et la relecture objectif par objectif.
+
+```sh
+python -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python lancer.py
+```
+
+Sous Windows : utiliser `.venv\Scripts\python.exe` pour les deux dernières commandes. Le serveur écoute uniquement sur l’interface locale. Aucun paquet n’est fusionné ni modifié ; les exports Anki restent hors Git.
+
+- [Registre des sources et chapitres](data/references.json) et [tableau initial CSV](data/suivi-initial.csv).
+- [Règle A/B et conservation des connaissances C](docs/regle-rangs.md).
+- [Identification des paquets et Drives](docs/identite-paquets.md).
+- [Validation du logiciel et limites](docs/validation.md).
+
+Les 51 entrées sont des chapitres issus des textes fournis, pas 51 items nationaux validés ni une preuve de couverture du programme. Un rang inconnu reste à clarifier. Les anciennes validations pneumo/neuro sont à reprendre sous la règle A/B, sans suppression de cartes.
+
+Tests : `python -m unittest discover -s tests -v`. Régressions navigateur facultatives, avec Playwright et Chromium : `python tests/browser_smoke.py` et `python tests/ranks_browser.py`. Page autonome et archive : `python construire.py`.
 
 ## Collaboration (Claude et Codex)
 

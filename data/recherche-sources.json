@@ -1,0 +1,50 @@
+{
+  "status": "pending_network_activation",
+  "tasks": [
+    {
+      "id": "drive-readme",
+      "title": "Lire le « Lisez-moi Anki.pdf » du Drive fourni",
+      "specialty": "Paquets Anki",
+      "url": "https://drive.google.com/drive/folders/1w3NoLnODfW1L69wGdNmbTrWEJHCyuOIR",
+      "link_label": "Ouvrir le Drive fourni",
+      "status": "Accès réseau non activé ; fichier non lu",
+      "evidence_required": "Nom exact et version du paquet, auteur, liens de mise à jour, consignes de fusion. Ne rien fusionner avant cette lecture."
+    },
+    {
+      "id": "recherche-ortho",
+      "title": "Orthopédie — retrouver le référentiel publié par les enseignants",
+      "specialty": "Orthopédie",
+      "url": "https://www.google.com/search?q=Coll%C3%A8ge+enseignants+orthop%C3%A9die+traumatologie+r%C3%A9f%C3%A9rentiel+deuxi%C3%A8me+cycle+EDN+CFCOT",
+      "link_label": "Lancer la recherche (résultats non consultés)",
+      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
+      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+    },
+    {
+      "id": "recherche-cancero",
+      "title": "Cancérologie — retrouver le référentiel publié par les enseignants",
+      "specialty": "Cancérologie",
+      "url": "https://www.google.com/search?q=Coll%C3%A8ge+national+enseignants+canc%C3%A9rologie+r%C3%A9f%C3%A9rentiel+deuxi%C3%A8me+cycle+EDN",
+      "link_label": "Lancer la recherche (résultats non consultés)",
+      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
+      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+    },
+    {
+      "id": "recherche-nephro",
+      "title": "Néphrologie — retrouver le référentiel publié par les enseignants",
+      "specialty": "Néphrologie",
+      "url": "https://www.google.com/search?q=CUEN+r%C3%A9f%C3%A9rentiel+n%C3%A9phrologie+deuxi%C3%A8me+cycle+enseignement",
+      "link_label": "Lancer la recherche (résultats non consultés)",
+      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
+      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+    },
+    {
+      "id": "recherche-sante-publique",
+      "title": "Santé publique — retrouver le référentiel publié par les enseignants",
+      "specialty": "Santé publique",
+      "url": "https://www.google.com/search?q=CUESP+r%C3%A9f%C3%A9rentiel+sant%C3%A9+publique+deuxi%C3%A8me+cycle+EDN",
+      "link_label": "Lancer la recherche (résultats non consultés)",
+      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
+      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+    }
+  ]
+}
