@@ -1,5 +1,7 @@
 # Audit du Deck EDN - MEA contre les collèges
 
+Méthode obligatoire : [PROTOCOLE.md](PROTOCOLE.md) · tâches : [TACHES.md](TACHES.md) · contrôle : `python outils/valider_audit.py` · avancement : `python outils/valider_audit.py --avancement`.
+
 ## Sources figées
 
 | Élément | Version | Où la retrouver |
@@ -41,6 +43,7 @@ Pour lire un item : `python outils/comparer_item.py 205` (contenu A/B du CEP pui
 | à mettre à jour | une note contredit la 9e ou lui manque un élément ajouté |
 | non retrouvé | aucune note ne couvre l'objectif |
 | à vérifier dans Anki | dépend d'images ou de médias non lisibles en texte |
+| divergent (autre collège) | la note qui diffère est rangée dans une autre matière et suit son propre collège |
 
 `pneumologie/item-XXX-corrections.csv` : modifications proposées, note par note
 (`nid` = identifiant de la note dans Anki ; recherche `nid:1780590545604` dans le navigateur
