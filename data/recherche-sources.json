@@ -1,0 +1,102 @@
+{
+  "status": "sources_identifiees_inventaires_a_integrer",
+  "consulted_on": "2026-11-06",
+  "access_status": "internet_complet_verifie",
+  "tasks": [
+    {
+      "id": "drive-readme",
+      "title": "Lisez-moi du Drive — Deck EDN - MEA",
+      "specialty": "Paquets Anki",
+      "url": "https://drive.google.com/file/d/1D54QcKxh_4ZkDEvvX16K4K3zlsEsbRns/view",
+      "link_label": "Ouvrir le PDF lu",
+      "status": "17 pages lues le 6 novembre 2026 ; synthèse : sources/lisez-moi.md",
+      "evidence_required": "Auteur Mohamed El Amri ; 14 lacunes déclarées, dont 210. Le paquet réel reste à auditer. Identité avec Picat/C2SU non établie ; aucune fusion."
+    },
+    {
+      "id": "recherche-ortho",
+      "title": "Orthopédie — édition récente identifiée",
+      "specialty": "Orthopédie",
+      "url": "https://www.sofcot.fr/notre-communaute/cfcot",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition — 2026-10-27 (parution éditeur). Fiche : sources/orthopedie.md",
+      "evidence_required": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-cancero",
+      "title": "Cancérologie — édition récente identifiée",
+      "specialty": "Cancérologie",
+      "url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition actualisée — 2026-09-28 (date annoncée éditeur ; disponibilité commerciale non confirmée). Fiche : sources/cancerologie.md",
+      "evidence_required": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-nephro",
+      "title": "Néphrologie — édition récente identifiée",
+      "specialty": "Néphrologie",
+      "url": "https://cuen.fr/",
+      "link_label": "Ouvrir la source du collège",
+      "status": "12e édition — 2026-10-27 (parution éditeur). Fiche : sources/nephrologie.md",
+      "evidence_required": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-sante-publique",
+      "title": "Santé publique — édition récente identifiée",
+      "specialty": "Santé publique",
+      "url": "https://www.cuesp.org/content/nos-ouvrages",
+      "link_label": "Ouvrir la source du collège",
+      "status": "6e édition — 2026-09-02 (publication éditeur). Fiche : sources/sante-publique.md",
+      "evidence_required": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    }
+  ],
+  "edition_research": {
+    "consulted_on": "2026-11-06",
+    "status": "bibliographie_verifiee_pas_audit_des_cartes",
+    "editions": [
+      {
+        "specialty": "Orthopédie",
+        "edition": "5e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340115637",
+        "college_url": "https://www.sofcot.fr/notre-communaute/cfcot",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/accueil/17021-orthopedie-traumatologie-5e-edition-9782340115637.html",
+        "document": "sources/orthopedie.md",
+        "access": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi."
+      },
+      {
+        "specialty": "Cancérologie",
+        "edition": "5e édition actualisée",
+        "date": "2026-09-28",
+        "date_type": "date annoncée éditeur ; disponibilité commerciale non confirmée",
+        "isbn": "9782846783637",
+        "college_url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+        "publisher_url": "https://www.med-line.fr/catalogue/cancerologie-3/",
+        "document": "sources/cancerologie.md",
+        "access": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès."
+      },
+      {
+        "specialty": "Néphrologie",
+        "edition": "12e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340117815",
+        "college_url": "https://cuen.fr/",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/17475-nephrologie-9782340117815.html",
+        "document": "sources/nephrologie.md",
+        "access": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi."
+      },
+      {
+        "specialty": "Santé publique",
+        "edition": "6e édition",
+        "date": "2026-09-02",
+        "date_type": "publication éditeur",
+        "isbn": "9782294788383",
+        "college_url": "https://www.cuesp.org/content/nos-ouvrages",
+        "publisher_url": "https://www.elsevier-masson.fr/sante-publique-9782294788383.html",
+        "document": "sources/sante-publique.md",
+        "access": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié."
+      }
+    ]
+  }
+}

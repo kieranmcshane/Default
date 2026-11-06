@@ -1,0 +1,88 @@
+{
+  "consulted_on": "2026-11-06",
+  "note": "Empreintes des réponses téléchargées et courts repères de lecture ; aucun livre complet ni carte Anki n’est versionné. Les pages HTML peuvent évoluer.",
+  "sources": [
+    {
+      "id": "college-cnec-identite",
+      "url": "https://cncem.org/cancerologie/",
+      "kind": "annuaire de la coordination des collèges",
+      "edition": null,
+      "date_publication": null,
+      "quotes": [
+        "Site web : https://www.cnecancero.org"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "d62cd57ff54b83ec2b8d817a06c0d61f732b53b4363fb4b1390d4bab7f9294e7"
+    },
+    {
+      "id": "college-cnec-deuxieme-cycle",
+      "url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+      "kind": "site officiel CNEC deuxième cycle",
+      "edition": "R2C, numéro non indiqué dans le texte consulté",
+      "date_publication": null,
+      "quotes": [
+        "L’ouvrage officiel est réalisé par le Collège National des Enseignants en Cancérologie",
+        "répartition des connaissances en rangs A et B"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "16e04148e3242176cc73b027465825a5e12bd7ba80ac4c3d0c081876e4f8b162"
+    },
+    {
+      "id": "editeur-5e",
+      "url": "https://www.med-line.fr/catalogue/cancerologie-3/",
+      "kind": "éditeur Med-Line",
+      "edition": "5e édition actualisée",
+      "date_publication": "2026-09-28",
+      "isbn": "9782846783637",
+      "quotes": [
+        "5e édition actualisée",
+        "28 septembre 2026",
+        "EN PRÉCOMMANDE – À PARAÎTRE LE 28 SEPTEMBRE"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "55fa873a05aac63a17b1f118262d335a8f1c823a739f59b2d0df19900faaa7ed"
+    },
+    {
+      "id": "extrait-5e",
+      "url": "https://www.med-line.fr/wp-content/uploads/2026/08/INt_CANCEROLOGIE-V2.pdf",
+      "kind": "extrait PDF public éditeur",
+      "edition": "5e édition actualisée",
+      "depot_legal": "septembre 2026",
+      "isbn": "9782846783637",
+      "pages_pdf": 25,
+      "quotes": [
+        "CANCÉROLOGIE - 5e ÉDITION ACTUALISÉE",
+        "Dépôt légal septembre 2026."
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "8fd7f0d280c50c3291b840c29be874f7651b6d6c28b83b6c770005c04ad890ec"
+    },
+    {
+      "id": "editeur-4e",
+      "url": "https://www.med-line.fr/catalogue/cancerologie-4e-edition-actualisee-r2c/",
+      "kind": "éditeur Med-Line, édition antérieure",
+      "edition": "4e édition actualisée",
+      "date_publication": "2024-08-08",
+      "isbn": "9782846783347",
+      "quotes": [
+        "4e édition actualisée",
+        "8 août 2024"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "07f877b59ee8fee6c287d04430f706f7aff7d0446b1224f23f7a1e00c8be42a0"
+    },
+    {
+      "id": "libraire-5e",
+      "url": "https://www.livres-medicaux.com/cancerologie/65131-college-de-cancerologie-5e-edition.html",
+      "kind": "notice secondaire libraire",
+      "edition": "5e",
+      "date_publication_declaree": "2026-09-25",
+      "isbn": "9782846783637",
+      "quotes": [
+        "Date 25/09/2026"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "1cdf8b4a8c5d840232e1ff0b54363ab2a3d53d0bc444cd4bb050b3a2d72b163f"
+    }
+  ]
+}

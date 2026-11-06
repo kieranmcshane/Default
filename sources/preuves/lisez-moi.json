@@ -1,0 +1,33 @@
+{
+  "consulted_at": "2026-11-06T15:02:01.060494+00:00",
+  "folder_url": "https://drive.google.com/drive/folders/1w3NoLnODfW1L69wGdNmbTrWEJHCyuOIR",
+  "file_url": "https://drive.google.com/file/d/1D54QcKxh_4ZkDEvvX16K4K3zlsEsbRns/view",
+  "download_url": "https://drive.usercontent.google.com/download?id=1D54QcKxh_4ZkDEvvX16K4K3zlsEsbRns&export=download",
+  "filename": "LISEZ-MOI anki.pdf",
+  "sha256": "26a83864e5e368d2630a82dc67e0beee9fecfb8ea0b03e0e6e3e6776f47a64af",
+  "bytes": 2945858,
+  "pages": 17,
+  "embedded_creation_date": "D:20261028132004+00'00'",
+  "embedded_modification_date": "D:20261028132004+00'00'",
+  "date_limitation": "Métadonnées techniques du PDF, pas une date de mise à jour médicale.",
+  "read_method": "Texte des 17 pages extrait ; pages 3 à 7 uniquement en images examinées visuellement.",
+  "deck_declared_name": "Deck EDN - MEA",
+  "author_declared_in_document": "Mohamed El Amri (signature p. 9)",
+  "declared_missing_items": [
+    "60",
+    "62",
+    "70",
+    "118",
+    "119",
+    "130",
+    "177",
+    "179",
+    "202",
+    "210",
+    "212",
+    "231",
+    "327",
+    "333"
+  ],
+  "missing_items_status": "Déclaration du PDF p. 8–9 ; non vérifiée contre un paquet réel."
+}

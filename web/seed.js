@@ -1,0 +1,578 @@
+window.EDN_SEED = {
+  "schema_version": 1,
+  "generated_at": "2026-11-06T14:37:47.611108+00:00",
+  "scope_note": "Inventaire partiel fourni : 22 entrées CEP et 29 chapitres CEN. Ce ne sont pas tous les items EDN. Les autres collèges restent à recenser.",
+  "sources": [
+    {
+      "id": "cep-paste-2026",
+      "specialty": "Pneumologie",
+      "title": "Référentiel du Collège des enseignants de pneumologie — texte fourni",
+      "edition": "9e édition annoncée dans le texte fourni",
+      "declared_updated_at": "2026-09-15",
+      "url": "",
+      "sha256": "95c0aebed41009159edd7f63a56ae76fdcda6df80532f6bcd81cd087c9384b9e",
+      "edition_status": "declared_unverified",
+      "local_file": "data/sources/pneumologie-fourni.txt",
+      "limitation": "Texte copié fourni par l’utilisateur ; URL officielle et fichiers des chapitres non fournis. La date annoncée n’établit pas la validité de la version en ligne. 359 bis est distinct de 359. EFR est une ressource supplémentaire non numérotée.",
+      "audit_scope": {
+        "policy_id": "edn-ab-v2",
+        "included_ranks": [
+          "A",
+          "B"
+        ],
+        "excluded_ranks": [
+          "C"
+        ],
+        "unknown_rank": "a_clarifier",
+        "granularity": "objectif_dans_ce_college",
+        "delete_notes": false
+      }
+    },
+    {
+      "id": "cen-paste-undated",
+      "specialty": "Neurologie",
+      "title": "Référentiel du Collège des enseignants de neurologie — texte fourni",
+      "edition": "Indéterminée (bandeau ECN 2022 conservé)",
+      "declared_updated_at": null,
+      "url": "",
+      "sha256": "4ffc5fd5a650542e07459091760703acb4dd9026a85f459f5536cbe4fc6f9b57",
+      "edition_status": "unknown",
+      "local_file": "data/sources/neurologie-fourni.txt",
+      "limitation": "29 chapitres sans numéro national. Le bandeau cite ECN 2022 et les 5e/6e éditions ; aucune édition actuelle ne peut en être déduite. Des chapitres regroupent plusieurs thèmes.",
+      "audit_scope": {
+        "policy_id": "edn-ab-v2",
+        "included_ranks": [
+          "A",
+          "B"
+        ],
+        "excluded_ranks": [
+          "C"
+        ],
+        "unknown_rank": "a_clarifier",
+        "granularity": "objectif_dans_ce_college",
+        "delete_notes": false
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "cep:75",
+      "source_id": "cep-paste-2026",
+      "number": "75",
+      "title": "Addiction au tabac",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:110",
+      "source_id": "cep-paste-2026",
+      "number": "110",
+      "title": "Troubles du sommeil",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:154",
+      "source_id": "cep-paste-2026",
+      "number": "154",
+      "title": "Infections respiratoires",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:159",
+      "source_id": "cep-paste-2026",
+      "number": "159",
+      "title": "Tuberculose",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:186",
+      "source_id": "cep-paste-2026",
+      "number": "186",
+      "title": "Hypersensibilité",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:188",
+      "source_id": "cep-paste-2026",
+      "number": "188",
+      "title": "Asthme, rhinite",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:203",
+      "source_id": "cep-paste-2026",
+      "number": "203",
+      "title": "Dyspnée",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:204",
+      "source_id": "cep-paste-2026",
+      "number": "204",
+      "title": "Toux",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:205",
+      "source_id": "cep-paste-2026",
+      "number": "205",
+      "title": "Hémopthysie",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:206",
+      "source_id": "cep-paste-2026",
+      "number": "206",
+      "title": "Épanchement pleural",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:207",
+      "source_id": "cep-paste-2026",
+      "number": "207",
+      "title": "Opacités et masses",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:208",
+      "source_id": "cep-paste-2026",
+      "number": "208",
+      "title": "Insuffisance respiratoire chronique",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:209",
+      "source_id": "cep-paste-2026",
+      "number": "209",
+      "title": "Bronchopneumopathie chronique obstructive",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:210",
+      "source_id": "cep-paste-2026",
+      "number": "210",
+      "title": "Pneumopathies interstitielles diffuses",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:211",
+      "source_id": "cep-paste-2026",
+      "number": "211",
+      "title": "Sarcoïdose",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:226",
+      "source_id": "cep-paste-2026",
+      "number": "226",
+      "title": "Maladie thrombo-embolique veineuse",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:230",
+      "source_id": "cep-paste-2026",
+      "number": "230",
+      "title": "Douleur thoracique aiguë",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:309",
+      "source_id": "cep-paste-2026",
+      "number": "309",
+      "title": "Cancer",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:338",
+      "source_id": "cep-paste-2026",
+      "number": "338",
+      "title": "Anaphylaxie",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:359",
+      "source_id": "cep-paste-2026",
+      "number": "359",
+      "title": "Détresse respiratoire",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:359-bis",
+      "source_id": "cep-paste-2026",
+      "number": "359 bis",
+      "title": "Corps étranger des voies aériennes",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cep:360",
+      "source_id": "cep-paste-2026",
+      "number": "360",
+      "title": "Pneumothorax",
+      "number_status": "explicit"
+    },
+    {
+      "id": "cen:accidents-vasculaires-cerebraux",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Accidents vasculaires cérébraux",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:addiction-a-lalcool-complications-neurologiques-de-lalcoolisme",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Addiction à l’alcool – Complications neurologiques de l’alcoolisme",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:alteration-aigue-de-la-vision",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Altération aiguë de la vision",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:cephalee-inhabituelle-aigue-et-chronique-chez-l-adulte-et-l-enfant",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Céphalée inhabituelle aiguë et chronique chez l'adulte et l'enfant",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:comas-non-traumatiques-chez-ladulte",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Comas non traumatiques chez l’adulte",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:compression-medullaire-non-traumatique-et-syndrome-de-la-queue-de-cheval",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Compression médullaire non traumatique et syndrome de la queue de cheval",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:confusion-troubles-cognitifs-et-demence",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Confusion, troubles cognitifs et démence",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:deficit-moteur-et-ou-sensitif-des-membres",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Déficit moteur et/ou sensitif des membres",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:deficit-neurologique-recent",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Déficit neurologique récent",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:diplopie",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Diplopie",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:douleur",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Douleur",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:epilepsies-de-lenfant-et-de-ladulte",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Épilepsies de l’enfant et de l’adulte",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:evaluation-clinique-et-fonctionnelle-dun-handicap-cognitif",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Évaluation clinique et fonctionnelle d’un handicap cognitif",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:hemorragie-meningee-non-traumatique",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Hémorragie méningée non traumatique",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:infections-a-herpes-virus-du-sujet-immunocompetent-infections-par-le-vih",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Infections à herpès virus du sujet immunocompétent – Infections par le VIH",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:maladie-de-parkinson",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Maladie de Parkinson",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:malaise-perte-de-connaissance-crise-comitiale-chez-ladulte",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Malaise, perte de connaissance, crise comitiale chez l’adulte",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:meningites-meningoencephalites-abces-cerebral-chez-l-adulte-et-l-enfant",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Méningites, méningoencéphalites, abcès cérébral chez l'adulte et l'enfant",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:migraine-nevralgie-du-trijumeau-et-algies-de-la-face",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Migraine, névralgie du trijumeau et algies de la face",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:mouvements-anormaux",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Mouvements anormaux",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:myasthenie",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Myasthénie",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:paralysie-faciale",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Paralysie faciale",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:radiculalgies-et-syndromes-canalaires-neuropathies-peripheriques-polyradiculonevrite-aigue-inflammatoire-syndrome-de-guillain-barre",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Radiculalgies et syndromes canalaires –– Neuropathies périphériques –– Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:sclerose-en-plaques",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Sclérose en plaques",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:trouble-aigu-de-la-parole-dysphonie",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Trouble aigu de la parole. Dysphonie",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:troubles-de-la-marche-et-de-lequilibre-troubles-de-la-marche-et-de-lequilibre-chez-le-sujet-age",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Troubles de la marche et de l’équilibre - Troubles de la marche et de l’équilibre chez le sujet âgé",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:troubles-du-sommeil-de-lenfant-et-de-ladulte",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Troubles du sommeil de l’enfant et de l’adulte",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:tumeurs-intracraniennes",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Tumeurs intracrâniennes",
+      "number_status": "unknown"
+    },
+    {
+      "id": "cen:vertige",
+      "source_id": "cen-paste-undated",
+      "number": null,
+      "title": "Vertige",
+      "number_status": "unknown"
+    }
+  ],
+  "scope": [
+    {
+      "specialty": "Pneumologie",
+      "status": "inventaire_partiel_fourni"
+    },
+    {
+      "specialty": "Neurologie",
+      "status": "inventaire_partiel_fourni"
+    },
+    {
+      "specialty": "Néphrologie",
+      "status": "source_identifiee_inventaire_a_integrer"
+    },
+    {
+      "specialty": "Orthopédie",
+      "status": "source_identifiee_inventaire_a_integrer"
+    },
+    {
+      "specialty": "Cancérologie",
+      "status": "source_identifiee_inventaire_a_integrer"
+    },
+    {
+      "specialty": "Santé publique",
+      "status": "source_identifiee_inventaire_a_integrer"
+    }
+  ],
+  "related_sources": [
+    {
+      "title": "Documentation publique Anki EDN",
+      "url": "https://github.com/c2su/Anki_EDN/tree/fceb5bf186c9641bb978cc891c8c8c8a797fe289/src",
+      "commit": "fceb5bf186c9641bb978cc891c8c8c8a797fe289"
+    },
+    {
+      "title": "Tableau de mises à jour annoncé par Anki EDN (non consulté)",
+      "url": "https://docs.google.com/spreadsheets/d/1EpIQmvkDmqrqDy4YTaygqLuE0qrh2Q_t8FdQx6AdEhU/edit"
+    },
+    {
+      "title": "Dossier Drive consulté ; Lisez-moi MEA lu, paquet Anki non audité",
+      "url": "https://drive.google.com/drive/folders/1w3NoLnODfW1L69wGdNmbTrWEJHCyuOIR"
+    }
+  ],
+  "research_tasks": [
+    {
+      "id": "drive-readme",
+      "title": "Lisez-moi du Drive — Deck EDN - MEA",
+      "specialty": "Paquets Anki",
+      "url": "https://drive.google.com/file/d/1D54QcKxh_4ZkDEvvX16K4K3zlsEsbRns/view",
+      "link_label": "Ouvrir le PDF lu",
+      "status": "17 pages lues le 6 novembre 2026 ; synthèse : sources/lisez-moi.md",
+      "evidence_required": "Auteur Mohamed El Amri ; 14 lacunes déclarées, dont 210. Le paquet réel reste à auditer. Identité avec Picat/C2SU non établie ; aucune fusion."
+    },
+    {
+      "id": "recherche-ortho",
+      "title": "Orthopédie — édition récente identifiée",
+      "specialty": "Orthopédie",
+      "url": "https://www.sofcot.fr/notre-communaute/cfcot",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition — 2026-10-27 (parution éditeur). Fiche : sources/orthopedie.md",
+      "evidence_required": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-cancero",
+      "title": "Cancérologie — édition récente identifiée",
+      "specialty": "Cancérologie",
+      "url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition actualisée — 2026-09-28 (date annoncée éditeur ; disponibilité commerciale non confirmée). Fiche : sources/cancerologie.md",
+      "evidence_required": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-nephro",
+      "title": "Néphrologie — édition récente identifiée",
+      "specialty": "Néphrologie",
+      "url": "https://cuen.fr/",
+      "link_label": "Ouvrir la source du collège",
+      "status": "12e édition — 2026-10-27 (parution éditeur). Fiche : sources/nephrologie.md",
+      "evidence_required": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    },
+    {
+      "id": "recherche-sante-publique",
+      "title": "Santé publique — édition récente identifiée",
+      "specialty": "Santé publique",
+      "url": "https://www.cuesp.org/content/nos-ouvrages",
+      "link_label": "Ouvrir la source du collège",
+      "status": "6e édition — 2026-09-02 (publication éditeur). Fiche : sources/sante-publique.md",
+      "evidence_required": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
+    }
+  ],
+  "audit_policy": {
+    "id": "edn-ab-v2",
+    "specialties": [
+      "Pneumologie",
+      "Neurologie",
+      "Néphrologie",
+      "Orthopédie",
+      "Cancérologie",
+      "Santé publique"
+    ],
+    "unit": "objectif_de_connaissance_dans_ce_college",
+    "included_ranks": [
+      "A",
+      "B"
+    ],
+    "excluded_ranks": [
+      "C"
+    ],
+    "unknown_rank": "a_clarifier_avant_validation_complete",
+    "exclusion_requires": "rang explicitement justifié par un repère dans la source du collège",
+    "preserve_all_notes": true,
+    "shared_note_rule": "Une note n’a pas de rang global : son contenu peut être C dans un collège et A ou B dans un autre. Aucune carte ni note n’est supprimée, suspendue ou modifiée par cette règle.",
+    "default_all_colleges": true
+  },
+  "edition_research": {
+    "consulted_on": "2026-11-06",
+    "status": "bibliographie_verifiee_pas_audit_des_cartes",
+    "editions": [
+      {
+        "specialty": "Orthopédie",
+        "edition": "5e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340115637",
+        "college_url": "https://www.sofcot.fr/notre-communaute/cfcot",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/accueil/17021-orthopedie-traumatologie-5e-edition-9782340115637.html",
+        "document": "sources/orthopedie.md",
+        "access": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi."
+      },
+      {
+        "specialty": "Cancérologie",
+        "edition": "5e édition actualisée",
+        "date": "2026-09-28",
+        "date_type": "date annoncée éditeur ; disponibilité commerciale non confirmée",
+        "isbn": "9782846783637",
+        "college_url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+        "publisher_url": "https://www.med-line.fr/catalogue/cancerologie-3/",
+        "document": "sources/cancerologie.md",
+        "access": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès."
+      },
+      {
+        "specialty": "Néphrologie",
+        "edition": "12e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340117815",
+        "college_url": "https://cuen.fr/",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/17475-nephrologie-9782340117815.html",
+        "document": "sources/nephrologie.md",
+        "access": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi."
+      },
+      {
+        "specialty": "Santé publique",
+        "edition": "6e édition",
+        "date": "2026-09-02",
+        "date_type": "publication éditeur",
+        "isbn": "9782294788383",
+        "college_url": "https://www.cuesp.org/content/nos-ouvrages",
+        "publisher_url": "https://www.elsevier-masson.fr/sante-publique-9782294788383.html",
+        "document": "sources/sante-publique.md",
+        "access": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié."
+      }
+    ]
+  }
+};

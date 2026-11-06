@@ -1,0 +1,42 @@
+{
+  "consulted_at": "2026-11-06",
+  "note": "Courts extraits et empreintes des réponses reçues ; les pages ou le PDF complets ne sont pas redistribués. Le statut HTTP était 200 pour les consultations enregistrées. Les champs extrait_ou_constat sont des extraits brefs normalisés ou constats descriptifs, pas une reproduction du chapitre.",
+  "sources": [
+    {
+      "url": "https://cuen.fr/",
+      "sha256_response": "105c66d352da2fdd7c0244d673305185bfa251c00dd2379f4b54fc0cb13312f4",
+      "bytes_received": 103648,
+      "extrait_ou_constat": "Manuel de néphrologie — 11e édition 2025-2026"
+    },
+    {
+      "url": "https://manuel.cuen.fr/",
+      "sha256_response": "3fa70736722b6f29b77ce2bd4f35522e1311d1d48b073df50d4881d99ace45a0",
+      "bytes_received": 133597,
+      "extrait_ou_constat": "La version numérique complète du livre est disponible ici depuis la fin Janvier 2025"
+    },
+    {
+      "url": "https://www.editions-ellipses.fr/accueil/15605-29400-nephrologie-11e-edition-9782340098145.html",
+      "sha256_response": "e977014ee27cde8b06b6eaad8a53613564daf753c52979afad3802b559f3b105",
+      "bytes_received": 243269,
+      "extrait_ou_constat": "Parution : 05.11.2024 — 11ᵉ Édition — Consulter la nouvelle édition"
+    },
+    {
+      "url": "https://www.editions-ellipses.fr/fr/17475-nephrologie-9782340117815.html",
+      "sha256_response": "86e1d64d0bba13b8dbf5e99d65d07569b8d4b74d0f03a07e72b6a0d35598866a",
+      "bytes_received": 238365,
+      "extrait_ou_constat": "Parution : 27.10.2026 — 12ᵉ Édition — ISBN 9782340117815"
+    },
+    {
+      "url": "https://www.editions-ellipses.fr/fr/index.php?controller=attachment&id_attachment=53758",
+      "sha256_response": "6772cd38a3f6922f2841efac57dd0d5dff9960ab33aa94092e40028978a0931e",
+      "bytes_received": 825721,
+      "extrait_ou_constat": "Néphrologie — 12e édition — Dépôt légal : octobre 2026"
+    },
+    {
+      "url": "https://manuel.cuen.fr/nephropathies-diabetiques/",
+      "sha256_response": "952c1dc467a2dd808c5469cb7ac0858355da0cf23b2ea5564a0bdec29ab5b903",
+      "bytes_received": 159729,
+      "extrait_ou_constat": "Chapitre public avec un tableau comportant les colonnes Rang, Rubrique, Intitulé, Descriptif."
+    }
+  ]
+}

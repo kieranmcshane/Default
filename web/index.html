@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contrôle EDN · Anki & collèges</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="seed.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="top"><div><p class="eyebrow">REGISTRE DE RELECTURE</p><h1>Vos Anki, face aux collèges.</h1><p>Retrouver les notes. Contrôler les objectifs. Garder les preuves.</p></div><span class="offline">● Local, sans envoi de vos notes</span></header>
+<main>
+<section class="onboarding" aria-label="Mode d’emploi"><div><b>1. Importer</b><p>Chargez un export Anki avec le lanceur local, ou un inventaire JSON créé par l’outil fourni.</p></div><div><b>2. Comparer</b><p>Confirmez la source et l’édition, associez les notes, puis vérifiez chaque objectif du chapitre.</p></div><div><b>3. Conserver</b><p>Enregistrez la relecture, exportez une sauvegarde JSON et partagez le registre CSV.</p></div></section>
+<section class="toolbar" aria-label="Fichiers"><label class="button primary" for="inventoryFile">Importer l’inventaire Anki</label><input id="inventoryFile" type="file" accept=".json,application/json" hidden><label class="button" for="ankiFile">Importer un fichier Anki</label><input id="ankiFile" type="file" accept=".apkg,.colpkg,.anki2,.anki21,.txt,.tsv" hidden><label class="button" for="manifestFile">Charger un référentiel JSON</label><input id="manifestFile" type="file" accept=".json,application/json" hidden><label class="button" for="backupFile">Restaurer une sauvegarde</label><input id="backupFile" type="file" accept=".json,application/json" hidden><button id="exportBackup">Sauvegarder tout (JSON)</button><button id="exportCSV">Exporter le registre CSV</button><button id="exportObjectives">Objectifs détaillés (CSV)</button><button id="exportReviews">Exporter les relectures JSON</button></section>
+<div id="storageWarning" class="notice error" role="alert" style="display:none"></div>
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<section id="inventorySummary" class="summary"></section>
+<details class="source-panel"><summary>Sources, éditions et périmètre de l’audit</summary><p>Les textes collés sont des points de départ. Vérifiez l’édition auprès du collège ; une date de téléchargement ou de modification Anki ne prouve pas une mise à jour médicale.</p><div id="sources"></div><div id="scope"></div></details>
+<section class="workspace"><aside class="catalogue"><div class="catalogue-head"><h2>Chapitres à contrôler</h2><label>Spécialité<select id="specialtyFilter"><option value="">Toutes</option></select></label><label>Rechercher un item ou un titre<input id="itemSearch" type="search" placeholder="Ex. 359 bis, asthme…"></label><label>État<select id="statusFilter"><option value="">Tous les états</option><option value="unreviewed">Non analysé</option><option value="suggested">Repéré, à confirmer</option><option value="not_found">Non retrouvé</option><option value="partial">Couverture partielle</option><option value="discrepancy">Écart constaté</option><option value="verified">Vérifié sur cette version</option><option value="stale">Relecture à refaire</option></select></label></div><div id="itemCount" class="muted"></div><div id="itemList" class="item-list"></div></aside><article id="editor" class="editor"><p>Sélectionnez un chapitre.</p></article></section>
+<footer>La couverture de ces listes ne représente pas tous les EDN. « Vérifié » désigne la relecture humaine documentée d’une version précise ; ce logiciel ne certifie pas les connaissances médicales. Les données restent dans ce navigateur. Exportez une sauvegarde avant de changer d’ordinateur ou de vider les données du navigateur.</footer>
+</main>
+</body></html>
