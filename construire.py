@@ -21,8 +21,8 @@ def build():
     standalone = OUT / 'Controle-EDN.html'
     standalone.write_text(page, encoding='utf-8')
     archive = OUT / 'controle-edn.zip'
-    include = [ROOT / f for f in ['README.md', '.gitignore', 'requirements.txt', 'edn_audit.py', 'lancer.py', 'construire.py']]
-    for directory in ['web', 'data', 'docs', 'tests']:
+    include = [ROOT / f for f in ['README.md', 'AGENTS.md', '.gitignore', 'requirements.txt', 'edn_audit.py', 'lancer.py', 'construire.py']]
+    for directory in ['web', 'data', 'docs', 'sources', 'tests']:
         include += [p for p in (ROOT / directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc']
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
         for path in sorted(include):

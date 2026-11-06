@@ -1,0 +1,73 @@
+{
+  "consulted_on": "2026-11-06",
+  "note": "Empreintes des réponses téléchargées et courts repères de lecture ; aucun livre complet ni carte Anki n’est versionné. Les pages HTML peuvent évoluer.",
+  "sources": [
+    {
+      "id": "college-cfcot",
+      "url": "https://www.sofcot.fr/notre-communaute/cfcot",
+      "kind": "site du collège sur SOFCOT",
+      "edition": "3e édition proposée en PDF",
+      "date_publication": null,
+      "quotes": [
+        "La 3ème édition du livre",
+        "Le Collège a obtenu l’autorisation des éditions Ellipses pour distribuer le PDF"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "c86521e8eac8deb8306fb8f30aaa67965f110d17f24fa6f4c5ec6a941c819b41"
+    },
+    {
+      "id": "annonce-cjo",
+      "url": "https://cjortho.fr/3e-edition-du-college-de-chirurgie-orthopedique-et-traumatologique",
+      "kind": "Collège des jeunes orthopédistes",
+      "edition": "3e",
+      "date_publication": "2022-07-26",
+      "quotes": [
+        "La nouvelle et 3ᵉ édition du collège de Chirurgie orthopédique et traumatologique est en ligne."
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "0a68ccee31d3f8794ac44925c248ebf13f8ac5c2049e9bf2ae191ddb9959f18b"
+    },
+    {
+      "id": "editeur-5e",
+      "url": "https://www.editions-ellipses.fr/fr/accueil/17021-orthopedie-traumatologie-5e-edition-9782340115637.html",
+      "kind": "éditeur Ellipses",
+      "edition": "5e",
+      "date_publication": "2026-10-27",
+      "isbn": "9782340115637",
+      "quotes": [
+        "Parution : 27.10.2026",
+        "5ᵉ Édition"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "b9b058071a86981df6446b56033babca6da1b5cdbcbcb223d597a76ba3846a58"
+    },
+    {
+      "id": "sommaire-5e",
+      "url": "https://www.editions-ellipses.fr/fr/index.php?controller=attachment&id_attachment=53724",
+      "kind": "sommaire PDF public éditeur",
+      "edition": "5e",
+      "depot_legal": "octobre 2026",
+      "isbn": "9782340115637",
+      "pages_pdf": 15,
+      "quotes": [
+        "5e édition",
+        "Dépôt légal : octobre 2026"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "db0a86e843f16155df201c44176ffca80679958e980c9106a36274b4d34b555b"
+    },
+    {
+      "id": "libraire-5e",
+      "url": "https://www.livres-medicaux.com/orthopedie-traumatologie/64406-college-orthopedie-traumatologie-2026-5e-ed.html",
+      "kind": "notice secondaire libraire",
+      "edition": "5e",
+      "date_publication_declaree": "2026-10-26",
+      "isbn": "9782340115637",
+      "quotes": [
+        "Date 26/10/2026"
+      ],
+      "consulted_at": "2026-11-06T15:07:04.929587+00:00",
+      "sha256_response": "56aabeef21dd280b8d3eee14de6fb830a68d7281d9bb160de6c502ca546aa56a"
+    }
+  ]
+}

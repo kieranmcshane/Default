@@ -45,8 +45,10 @@ class ReferenceTests(unittest.TestCase):
         self.assertIn('Trouble aigu de la parole. Dysphonie', titles)
 
     def test_missing_specialties_stay_visible(self):
-        missing = {s['specialty'] for s in self.manifest['scope'] if s['status'] == 'source_a_ajouter'}
+        missing = {s['specialty'] for s in self.manifest['scope'] if s['status'] == 'source_identifiee_inventaire_a_integrer'}
         self.assertEqual(missing, {'Néphrologie', 'Orthopédie', 'Cancérologie', 'Santé publique'})
+        inventoried = {s['specialty'] for s in self.manifest['sources']}
+        self.assertFalse(missing & inventoried, 'Trouver une édition ne suffit pas à inventorier ses objectifs')
 
 
 if __name__ == '__main__':

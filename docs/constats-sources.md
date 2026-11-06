@@ -21,7 +21,7 @@ La copie locale du dépôt public [`c2su/Anki_EDN`](https://github.com/c2su/Anki
 
 Les trois entrées CEN facilement omises par un extracteur sont **Altération aiguë de la vision**, **Hémorragie méningée non traumatique**, **Trouble aigu de la parole. Dysphonie**. Certains chapitres regroupent plusieurs thèmes ; un chapitre ne correspond pas nécessairement à un seul item national. Les textes collés ne conservent pas les URL des pages et des téléchargements : leur provenance web précise devra être ajoutée.
 
-Ces deux inventaires ne définissent pas le programme complet des EDN. Les sources de néphrologie, orthopédie, cancérologie, santé publique et des autres collèges restent à inventorier. Le dossier Drive transmis ne constitue pas, par sa seule URL, un paquet analysé ni une preuve de contenu.
+Ces deux inventaires ne définissent pas le programme complet des EDN. Les éditions récentes de néphrologie, orthopédie, cancérologie et santé publique sont maintenant [documentées](../sources/README.md) ; leurs objectifs A/B restent à inventorier. Le dossier Drive transmis ne constitue pas, par sa seule URL, un paquet analysé ni une preuve de contenu.
 
 ## Condition d'une validation utilisable
 

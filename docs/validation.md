@@ -1,5 +1,7 @@
 # Validation et limites de livraison
 
+**État actuel :** Internet complet vérifié, Lisez-moi du Drive lu et quatre référentiels 2026 identifiés dans [sources](../sources/README.md). Les anciens blocages réseau décrits plus bas sont historiques et résolus. Aucune carte médicale réelle n’est certifiée. La politique actuelle est `edn-ab-v2` pour tout collège.
+
 Vérifications du 6 novembre 2026 dans l’environnement de développement :
 
 - **29 tests Python réussis**, aucun test ignoré : 18 tests d’import, 5 tests du registre source, 6 tests HTTP locaux.
@@ -30,6 +32,14 @@ La régression navigateur est conservée dans `tests/browser_smoke.py` : import 
 
 ## Contrôle du périmètre A/B en pneumologie et neurologie
 
-La régression `python tests/ranks_browser.py` vérifie, avec des connaissances **synthétiques** : seuls A/B justifiés comptent ; C absent ou divergent n’empêche pas la validation A/B ; les objectifs C et les notes partagées restent conservés ; le même contenu peut être C dans un collège et B dans l’autre ; un rang inconnu ou C sans preuve bloque la validation complète ; un ensemble uniquement C ne valide pas un périmètre A/B ; une ancienne association C indisponible ne bloque pas la revalidation A/B. Les anciennes validations sont à reprendre et les autres spécialités conservent leurs règles. Les exports conservent le détail des exclusions et des rangs inconnus.
+La régression `python tests/ranks_browser.py` vérifie, avec des connaissances **synthétiques** : seuls A/B justifiés comptent ; C absent ou divergent n’empêche pas la validation A/B ; les objectifs C et les notes partagées restent conservés ; le même contenu peut être C dans un collège et B dans l’autre ; un rang inconnu ou C sans preuve bloque la validation complète ; un ensemble uniquement C ne valide pas un périmètre A/B ; une ancienne association C indisponible ne bloque pas la revalidation A/B. Les anciennes validations sont à reprendre ; depuis la lecture de main, tout collège utilise par défaut la politique A/B `edn-ab-v2`. Les exports conservent le détail des exclusions et des rangs inconnus.
 
 Ces contrôles valident la règle logicielle. Aucun rang réel de connaissance ni aucune conformité médicale n’a été déduit des seuls titres des chapitres.
+
+## Après publication de l’environnement et récupération de main
+
+Le 6 novembre 2026, l’environnement a été observé avec Internet complet (`unrestricted`, politique appliquée). Le site C2SU, le dossier Drive et le téléchargement de son Lisez-moi ont répondu avec succès. Le blocage réseau décrit plus haut est donc **historique et résolu**. Le PDF a été lu ; ses preuves et limites sont dans `sources/lisez-moi.md`. Aucune carte réelle n’a encore été certifiée conforme.
+
+Le système a été placé sur `codex/systeme-controle`, basée sur la main récupérée au commit `eb94489708cfcdd809acb43a07ab9133250cbb16`. Les règles `README.md` et `AGENTS.md` ont été lues ; le README du projet est conservé et le guide logiciel déplacé dans `docs/mode-emploi.md`.
+
+Les 29 tests Python, les régressions navigateur A/B et le parcours complet d’import/sauvegarde ont été exécutés avec succès après l’intégration initiale sur cette branche. La politique A/B par défaut des collèges ajoutés est ensuite alignée sur la règle générale du dépôt ; aucun classement médical n’est inféré de cette extension logicielle.

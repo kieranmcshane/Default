@@ -15,7 +15,7 @@
       "local_file": "data/sources/pneumologie-fourni.txt",
       "limitation": "Texte copié fourni par l’utilisateur ; URL officielle et fichiers des chapitres non fournis. La date annoncée n’établit pas la validité de la version en ligne. 359 bis est distinct de 359. EFR est une ressource supplémentaire non numérotée.",
       "audit_scope": {
-        "policy_id": "pneumo-neuro-ab-v1",
+        "policy_id": "edn-ab-v2",
         "included_ranks": [
           "A",
           "B"
@@ -40,7 +40,7 @@
       "local_file": "data/sources/neurologie-fourni.txt",
       "limitation": "29 chapitres sans numéro national. Le bandeau cite ECN 2022 et les 5e/6e éditions ; aucune édition actuelle ne peut en être déduite. Des chapitres regroupent plusieurs thèmes.",
       "audit_scope": {
-        "policy_id": "pneumo-neuro-ab-v1",
+        "policy_id": "edn-ab-v2",
         "included_ranks": [
           "A",
           "B"
@@ -424,19 +424,19 @@
     },
     {
       "specialty": "Néphrologie",
-      "status": "source_a_ajouter"
+      "status": "source_identifiee_inventaire_a_integrer"
     },
     {
       "specialty": "Orthopédie",
-      "status": "source_a_ajouter"
+      "status": "source_identifiee_inventaire_a_integrer"
     },
     {
       "specialty": "Cancérologie",
-      "status": "source_a_ajouter"
+      "status": "source_identifiee_inventaire_a_integrer"
     },
     {
       "specialty": "Santé publique",
-      "status": "source_a_ajouter"
+      "status": "source_identifiee_inventaire_a_integrer"
     }
   ],
   "related_sources": [
@@ -450,62 +450,66 @@
       "url": "https://docs.google.com/spreadsheets/d/1EpIQmvkDmqrqDy4YTaygqLuE0qrh2Q_t8FdQx6AdEhU/edit"
     },
     {
-      "title": "Dossier Google Drive fourni (non consulté)",
+      "title": "Dossier Drive consulté ; Lisez-moi MEA lu, paquet Anki non audité",
       "url": "https://drive.google.com/drive/folders/1w3NoLnODfW1L69wGdNmbTrWEJHCyuOIR"
     }
   ],
   "research_tasks": [
     {
       "id": "drive-readme",
-      "title": "Lire le « Lisez-moi Anki.pdf » du Drive fourni",
+      "title": "Lisez-moi du Drive — Deck EDN - MEA",
       "specialty": "Paquets Anki",
-      "url": "https://drive.google.com/drive/folders/1w3NoLnODfW1L69wGdNmbTrWEJHCyuOIR",
-      "link_label": "Ouvrir le Drive fourni",
-      "status": "Accès réseau non activé ; fichier non lu",
-      "evidence_required": "Nom exact et version du paquet, auteur, liens de mise à jour, consignes de fusion. Ne rien fusionner avant cette lecture."
+      "url": "https://drive.google.com/file/d/1D54QcKxh_4ZkDEvvX16K4K3zlsEsbRns/view",
+      "link_label": "Ouvrir le PDF lu",
+      "status": "17 pages lues le 6 novembre 2026 ; synthèse : sources/lisez-moi.md",
+      "evidence_required": "Auteur Mohamed El Amri ; 14 lacunes déclarées, dont 210. Le paquet réel reste à auditer. Identité avec Picat/C2SU non établie ; aucune fusion."
     },
     {
       "id": "recherche-ortho",
-      "title": "Orthopédie — retrouver le référentiel publié par les enseignants",
+      "title": "Orthopédie — édition récente identifiée",
       "specialty": "Orthopédie",
-      "url": "https://www.google.com/search?q=Coll%C3%A8ge+enseignants+orthop%C3%A9die+traumatologie+r%C3%A9f%C3%A9rentiel+deuxi%C3%A8me+cycle+EDN+CFCOT",
-      "link_label": "Lancer la recherche (résultats non consultés)",
-      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
-      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+      "url": "https://www.sofcot.fr/notre-communaute/cfcot",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition — 2026-10-27 (parution éditeur). Fiche : sources/orthopedie.md",
+      "evidence_required": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
     },
     {
       "id": "recherche-cancero",
-      "title": "Cancérologie — retrouver le référentiel publié par les enseignants",
+      "title": "Cancérologie — édition récente identifiée",
       "specialty": "Cancérologie",
-      "url": "https://www.google.com/search?q=Coll%C3%A8ge+national+enseignants+canc%C3%A9rologie+r%C3%A9f%C3%A9rentiel+deuxi%C3%A8me+cycle+EDN",
-      "link_label": "Lancer la recherche (résultats non consultés)",
-      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
-      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+      "url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+      "link_label": "Ouvrir la source du collège",
+      "status": "5e édition actualisée — 2026-09-28 (date annoncée éditeur ; disponibilité commerciale non confirmée). Fiche : sources/cancerologie.md",
+      "evidence_required": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
     },
     {
       "id": "recherche-nephro",
-      "title": "Néphrologie — retrouver le référentiel publié par les enseignants",
+      "title": "Néphrologie — édition récente identifiée",
       "specialty": "Néphrologie",
-      "url": "https://www.google.com/search?q=CUEN+r%C3%A9f%C3%A9rentiel+n%C3%A9phrologie+deuxi%C3%A8me+cycle+enseignement",
-      "link_label": "Lancer la recherche (résultats non consultés)",
-      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
-      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+      "url": "https://cuen.fr/",
+      "link_label": "Ouvrir la source du collège",
+      "status": "12e édition — 2026-10-27 (parution éditeur). Fiche : sources/nephrologie.md",
+      "evidence_required": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
     },
     {
       "id": "recherche-sante-publique",
-      "title": "Santé publique — retrouver le référentiel publié par les enseignants",
+      "title": "Santé publique — édition récente identifiée",
       "specialty": "Santé publique",
-      "url": "https://www.google.com/search?q=CUESP+r%C3%A9f%C3%A9rentiel+sant%C3%A9+publique+deuxi%C3%A8me+cycle+EDN",
-      "link_label": "Lancer la recherche (résultats non consultés)",
-      "status": "Recherche en attente de l’accès réseau ; aucune édition confirmée",
-      "evidence_required": "Site officiel du collège, édition applicable à la session, sommaire complet numéroté, objectifs de rang A/B, accès aux chapitres et errata. Une page d’éditeur seule ne prouve pas le contenu."
+      "url": "https://www.cuesp.org/content/nos-ouvrages",
+      "link_label": "Ouvrir la source du collège",
+      "status": "6e édition — 2026-09-02 (publication éditeur). Fiche : sources/sante-publique.md",
+      "evidence_required": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié. Objectifs A/B et cartes réelles à comparer ; aucun item déclaré conforme."
     }
   ],
   "audit_policy": {
-    "id": "pneumo-neuro-ab-v1",
+    "id": "edn-ab-v2",
     "specialties": [
       "Pneumologie",
-      "Neurologie"
+      "Neurologie",
+      "Néphrologie",
+      "Orthopédie",
+      "Cancérologie",
+      "Santé publique"
     ],
     "unit": "objectif_de_connaissance_dans_ce_college",
     "included_ranks": [
@@ -518,6 +522,57 @@
     "unknown_rank": "a_clarifier_avant_validation_complete",
     "exclusion_requires": "rang explicitement justifié par un repère dans la source du collège",
     "preserve_all_notes": true,
-    "shared_note_rule": "Une note n’a pas de rang global : son contenu peut être C dans un collège et A ou B dans un autre. Aucune carte ni note n’est supprimée, suspendue ou modifiée par cette règle."
+    "shared_note_rule": "Une note n’a pas de rang global : son contenu peut être C dans un collège et A ou B dans un autre. Aucune carte ni note n’est supprimée, suspendue ou modifiée par cette règle.",
+    "default_all_colleges": true
+  },
+  "edition_research": {
+    "consulted_on": "2026-11-06",
+    "status": "bibliographie_verifiee_pas_audit_des_cartes",
+    "editions": [
+      {
+        "specialty": "Orthopédie",
+        "edition": "5e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340115637",
+        "college_url": "https://www.sofcot.fr/notre-communaute/cfcot",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/accueil/17021-orthopedie-traumatologie-5e-edition-9782340115637.html",
+        "document": "sources/orthopedie.md",
+        "access": "Collège : PDF 3e édition ; sommaire public de la 5e, texte intégral récent non établi."
+      },
+      {
+        "specialty": "Cancérologie",
+        "edition": "5e édition actualisée",
+        "date": "2026-09-28",
+        "date_type": "date annoncée éditeur ; disponibilité commerciale non confirmée",
+        "isbn": "9782846783637",
+        "college_url": "https://www.cnecancero.org/enseignement-de-2%C3%A8me-cycle",
+        "publisher_url": "https://www.med-line.fr/catalogue/cancerologie-3/",
+        "document": "sources/cancerologie.md",
+        "access": "Extrait public récent de 25 pages ; livre complet récent non identifié en libre accès."
+      },
+      {
+        "specialty": "Néphrologie",
+        "edition": "12e édition",
+        "date": "2026-10-27",
+        "date_type": "parution éditeur",
+        "isbn": "9782340117815",
+        "college_url": "https://cuen.fr/",
+        "publisher_url": "https://www.editions-ellipses.fr/fr/17475-nephrologie-9782340117815.html",
+        "document": "sources/nephrologie.md",
+        "access": "CUEN gratuit : 11e édition 2025–2026 ; sommaire public 12e, livre complet récent non établi."
+      },
+      {
+        "specialty": "Santé publique",
+        "edition": "6e édition",
+        "date": "2026-09-02",
+        "date_type": "publication éditeur",
+        "isbn": "9782294788383",
+        "college_url": "https://www.cuesp.org/content/nos-ouvrages",
+        "publisher_url": "https://www.elsevier-masson.fr/sante-publique-9782294788383.html",
+        "document": "sources/sante-publique.md",
+        "access": "CUESP : notice 5e/2022 ; extrait public 6e, texte intégral récent non identifié."
+      }
+    ]
   }
 }

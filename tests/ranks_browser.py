@@ -168,25 +168,42 @@ def main():
             prepare_review(page,ids['pneumo'],[objective('A')])
             save(page)
             assert status(page,ids['pneumo']) == 'verified'
-            page.evaluate('''() => {const s=EDN_AUDIT_TEST.getState();
-                delete s.reviews[s.selectedId].rank_policy_signature;}''')
-            assert status(page,ids['pneumo']) == 'stale'
-            print('PASS anciennes validations sans signature de politique à refaire')
+            for old_signature in [None, 'pneumo-neuro-ab-v1:pneumologie']:
+                page.evaluate('''(signature) => {const s=EDN_AUDIT_TEST.getState();
+                    const r=s.reviews[s.selectedId];
+                    if(signature===null)delete r.rank_policy_signature;
+                    else r.rank_policy_signature=signature;}''', old_signature)
+                assert status(page,ids['pneumo']) == 'stale'
+            print('PASS anciennes validations sans signature ou en politique v1 à refaire')
 
-            # Other specialties keep the prior all-objectives rule.
-            other_id='other:test'
-            page.evaluate('''() => {const s=EDN_AUDIT_TEST.getState();
-              s.manifest.sources.push({id:'other-source',specialty:'Orthopédie',title:'Source fictive',sha256:'d'.repeat(64)});
-              s.manifest.items.push({id:'other:test',source_id:'other-source',number:null,title:'Chapitre fictif',number_status:'unknown'});
-            }''')
-            prepare_review(page,other_id,[objective('C','ecart')])
-            assert validation(page,other_id)
-            assert status(page,other_id)=='discrepancy'
-            prepare_review(page,other_id,[objective('unknown')])
-            assert validation(page,other_id)==[], validation(page,other_id)
-            save(page)
-            assert status(page,other_id)=='verified'
-            print('PASS autres spécialités inchangées')
+            # The repository rule applies to every college, including future
+            # manifests. A C rank or an unknown rank never becomes included by
+            # falling back to the old all-objectives behavior.
+            specialties=['Orthopédie','Cancérologie','Néphrologie','Santé publique','Autre collège fictif']
+            for index,specialty in enumerate(specialties):
+                other_id=f'other:test{index}'
+                page.evaluate('''({id,specialty}) => {const s=EDN_AUDIT_TEST.getState();
+                  const sourceId=id+'-source';
+                  s.manifest.sources.push({id:sourceId,specialty,title:'Source fictive',sha256:'d'.repeat(64)});
+                  s.manifest.items.push({id,source_id:sourceId,number:null,title:'Chapitre fictif '+specialty,number_status:'unknown'});
+                }''', {'id':other_id,'specialty':specialty})
+                prepare_review(page,other_id,[objective('A'),objective('C','ecart',[])])
+                assert page.get_by_label('Rang dans ce collège').count()==2
+                assert page.get_by_label('Repère du collège qui justifie le rang',exact=True).count()==2
+                assert validation(page,other_id)==[],validation(page,other_id)
+                assert page.evaluate('(id)=>EDN_AUDIT_TEST.counts(id)',other_id)=={'included':1,'conforme':1,'excluded':1,'unknown':0,'total':2}
+                save(page)
+                assert status(page,other_id)=='verified'
+                assert page.evaluate('(id)=>EDN_AUDIT_TEST.policySignature(id)',other_id).startswith('edn-ab-v2:')
+                prepare_review(page,other_id,[objective('A'),objective('unknown')])
+                assert validation(page,other_id),'Unknown rank must block every college'
+                save(page)
+                assert status(page,other_id)!='verified'
+                prepare_review(page,other_id,[objective('C','ecart',[])])
+                assert validation(page,other_id),'A C-only scope must not validate in any college'
+                assert status(page,other_id)!='discrepancy','Excluded C must not cause a content discrepancy'
+                assert page.evaluate('JSON.stringify(EDN_AUDIT_TEST.getState().inventory.notes)')==before
+            print('PASS quatre autres collèges et futur collège : A/B requis, C conservé exclu, inconnu bloquant')
 
             # Fixture for inspectable exports: count only A/B in the chapter,
             # retain C and unknown rows in the detailed evidence export.

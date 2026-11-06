@@ -1,0 +1,33 @@
+{
+  "consulted_on": "2026-11-06",
+  "sources": [
+    {
+      "url": "https://www.cuesp.org/content/sant%C3%A9-publique-r%C3%A9ussir-son-dfasm-connaissances-cl%C3%A9s",
+      "retrieved_html_sha256": "23d26de0d554d027096c8019ae44bbc3cab4a7782901864557c6d93bb5325ea2",
+      "short_quotes": [
+        "Les référentiels des Collèges - Elsevier Masson - 09/2022",
+        "Cette 5e édition propose une mise à jour complète"
+      ]
+    },
+    {
+      "url": "https://www.elsevier-masson.fr/sante-publique-9782294788383.html",
+      "retrieved_html_sha256": "5bf2172a6e1a36d4e228159dd1444782f89b505f9da5c4f34123017264f3de88",
+      "short_quotes": [
+        "Cette 6e édition",
+        "Date de publication : 2 sept. 2026",
+        "N° d'édition : 6",
+        "ISBN : 9782294788383",
+        "Les étudiants en DFASM qui souhaitent se préparer efficacement aux rangs A et B"
+      ]
+    }
+  ],
+  "access_check": {
+    "url": "https://www.elsevier-masson.fr/media/wysiwyg/PDF/FR/9782294788383_CHAPITRE_18_ADDICTIONS.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "content_length": 366184,
+    "checked_on": "2026-11-06",
+    "scope": "Accessibilité de l’extrait, pas audit de son contenu médical"
+  },
+  "excerpts_note": "Courts fragments ou champs de métadonnées ; sauts de ligne et espaces normalisés pour lecture."
+}

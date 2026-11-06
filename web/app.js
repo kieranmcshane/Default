@@ -4,7 +4,7 @@
   const STORAGE = 'edn-audit-register-v1';
   const seed = window.EDN_SEED || {sources:[],items:[],scope:[]};
   const clone = x => JSON.parse(JSON.stringify(x));
-  const RANK_POLICY = Object.freeze({version:'pneumo-neuro-ab-v1',specialties:['Pneumologie','Neurologie'],included_ranks:['A','B'],excluded_ranks:['C'],unknown_rank:'must_be_clarified',notes:'Retained; rank is assessed per objective and college, never per whole note.'});
+  const RANK_POLICY = Object.freeze({version:'edn-ab-v2',scope:'all_colleges',included_ranks:['A','B'],excluded_ranks:['C'],unknown_rank:'must_be_clarified',notes:'Retained; rank is assessed per objective and college, never per whole note.'});
   const initial = () => ({format:'edn-audit-backup',version:1,manifest:clone(seed),inventory:null,reviews:{},review_history:[],rank_policy:clone(RANK_POLICY),mapping:{},selectedId:seed.items[0]?.id || null});
   let state=initial(), storageOK=true;
   const $=id=>document.getElementById(id);
@@ -30,7 +30,7 @@
   const getSource=item=>state.manifest.sources.find(s=>s.id===item.source_id)||{};
   const itemNumber=item=>state.mapping[item.id]?.number||item.number;
   const refSignature=item=>JSON.stringify({source:getSource(item),item:{...item,number:itemNumber(item)}});
-  function policyFor(item){return ['pneumologie','neurologie'].includes(norm(getSource(item).specialty))?RANK_POLICY:null;}
+  function policyFor(item){return RANK_POLICY;}
   function policySignature(item){return policyFor(item)?RANK_POLICY.version+':'+norm(getSource(item).specialty):null;}
   function objectiveRank(o){return ['A','B','C'].includes(o?.rank)?o.rank:'unknown';}
   function objectiveScope(item,o){
@@ -86,14 +86,14 @@
   function updateSummary(){const items=state.manifest.items, verified=items.filter(i=>status(i)==='verified').length, staleCount=items.filter(i=>status(i)==='stale').length;const parts=[[items.length,'chapitres dans les listes fournies'],[state.inventory?state.inventory.notes.length:'—','notes Anki importées'],[verified,'chapitres relus et documentés'],[staleCount,'relectures à refaire']];$('inventorySummary').replaceChildren(...parts.map(([v,t])=>{const e=E('div',undefined,'metric');e.append(E('strong',v),E('span',t));return e;}));}
   function renderSources(){
     const host=$('sources');host.replaceChildren();
-    for(const s of state.manifest.sources){const row=E('section',undefined,'source-grid'),info=E('div'),forms=E('div',undefined,'source-fields');info.append(E('h3',s.specialty+' · '+s.title),E('p',s.limitation||''),E('p','Date annoncée : '+(s.declared_updated_at||'indéterminée')),E('p','Empreinte du texte fourni : '+(s.sha256||'non fournie'),'note-meta'));if(['pneumologie','neurologie'].includes(norm(s.specialty)))info.append(E('p','Périmètre de contrôle : rangs A et B uniquement. Le rang C reste conservé, hors calcul ; tout rang non justifié reste à clarifier. Aucune carte n’est supprimée.','callout'));
+    for(const s of state.manifest.sources){const row=E('section',undefined,'source-grid'),info=E('div'),forms=E('div',undefined,'source-fields');info.append(E('h3',s.specialty+' · '+s.title),E('p',s.limitation||''),E('p','Date annoncée : '+(s.declared_updated_at||'indéterminée')),E('p','Empreinte du texte fourni : '+(s.sha256||'non fournie'),'note-meta'));info.append(E('p','Périmètre de contrôle : rangs A et B uniquement. Le rang C reste conservé, hors calcul ; tout rang non justifié reste à clarifier. Aucune carte n’est supprimée.','callout'));
       const link=E('div');link.append(sourceLink(s));info.append(link);
       const changed=()=>{s.current_confirmed=false;const checkbox=forms.querySelector('input[type=checkbox]');if(checkbox)checkbox.checked=false;persist();updateSummary();renderList();};
       forms.append(field('URL officielle (à vérifier)',s.url,v=>{s.url=v;changed();link.replaceChildren(sourceLink(s));}),field('Édition / version contrôlée',s.edition,v=>{s.edition=v;changed();}),field('Date/version de la source vérifiée',s.verified_source_version,v=>{s.verified_source_version=v;changed();}),check('J’ai vérifié auprès du collège que cette édition est l’édition actuelle.',s.current_confirmed,v=>{s.current_confirmed=v;s.current_confirmed_at=v?date():null;persist();updateSummary();renderList();if(state.selectedId)renderEditor();}));
       row.append(info,forms);host.append(row);
     }
     const scope=$('scope');scope.replaceChildren(E('h3','Périmètre et sources encore manquantes'));const chips=E('div',undefined,'scope-list');for(const s of state.manifest.scope||[])chips.append(E('span',s.specialty+' — '+s.status,'scope-chip'));scope.append(chips);
-    if(state.manifest.research_tasks?.length){const tasks=E('div');tasks.append(E('h3','Sources à rechercher et document à lire'));for(const t of state.manifest.research_tasks){const entry=E('section',undefined,'source-grid'),text=E('div');text.append(E('h4',t.title),E('p',t.status),E('p',t.evidence_required,'muted'));const url=safeURL(t.url);if(url){const a=E('a',t.link_label||'Ouvrir la piste');a.href=url;a.target='_blank';a.rel='noopener noreferrer';entry.append(text,a);}else entry.append(text);tasks.append(entry);}scope.append(tasks);}
+    if(state.manifest.research_tasks?.length){const tasks=E('div');tasks.append(E('h3','Recherche des sources et lecture du Drive'));for(const t of state.manifest.research_tasks){const entry=E('section',undefined,'source-grid'),text=E('div');text.append(E('h4',t.title),E('p',t.status),E('p',t.evidence_required,'muted'));const url=safeURL(t.url);if(url){const a=E('a',t.link_label||'Ouvrir la piste');a.href=url;a.target='_blank';a.rel='noopener noreferrer';entry.append(text,a);}else entry.append(text);tasks.append(entry);}scope.append(tasks);}
 
   }
   function renderFilters(){const sel=$('specialtyFilter');const current=sel.value;sel.replaceChildren(new Option('Toutes',''));for(const s of [...new Set(state.manifest.sources.map(s=>s.specialty))])sel.add(new Option(s,s));sel.value=current;}
@@ -155,7 +155,7 @@
       renderObjectiveNotes();updateRankSummary();
     }
     host.append(btn('Ajouter un objectif à contrôler',()=>{r.objectives.push({text:'',locator:'',rank:'unknown',rank_locator:'',note_keys:[],verdict:'a_verifier',comment:''});touch(item);renderObjectives();}));
-    host.append(check('J’ai listé et contrôlé tous les objectifs du chapitre dans le périmètre attendu (A/B en pneumologie et neurologie), et justifié chaque rang C exclu. Je n’ai pas vérifié seulement un échantillon.',r.full_scope,v=>{r.full_scope=v;touch(item);}));
+    host.append(check('J’ai listé et contrôlé tous les objectifs du chapitre dans le périmètre A/B de ce collège, et justifié chaque rang C exclu. Je n’ai pas vérifié seulement un échantillon.',r.full_scope,v=>{r.full_scope=v;touch(item);}));
     host.append(E('h3','3 · Documenter la relecture'));
     const fields=E('div',undefined,'two-cols');fields.append(field('Relecteur',r.reviewer,v=>{r.reviewer=v;touch(item);}),field('Chapitre / pages / sections contrôlées',r.source_locator,v=>{r.source_locator=v;touch(item);}));host.append(fields,field('Bilan et méthode de recherche (obligatoire si non retrouvé)',r.comment,v=>{r.comment=v;touch(item);},{type:'textarea'}));
     const outcomeLabel=E('label','Conclusion de cette relecture'),outcome=E('select');for(const [v,t] of [['partial','Couverture partielle / relecture en cours'],['not_found','Non retrouvé après recherche (absence non prouvée)'],['discrepancy','Écart de contenu constaté'],['verified','Tout le périmètre contrôlé est conforme']])outcome.add(new Option(policyFor(item)&&v==='discrepancy'?'Écart de contenu A/B constaté':policyFor(item)&&v==='verified'?'Tout le périmètre A/B contrôlé est conforme':t,v));outcome.value=r.outcome;outcome.addEventListener('change',()=>{r.outcome=outcome.value;touch(item);showIssues();});outcomeLabel.append(outcome);host.append(outcomeLabel);

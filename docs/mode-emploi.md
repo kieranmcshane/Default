@@ -2,17 +2,17 @@
 
 Un outil local pour vérifier **vous-mêmes** la présence des sujets et la conformité des cartes à une version identifiée du collège. Le rapprochement automatique repère des candidats ; la validation du contenu reste explicite, documentée et humaine.
 
-**État initial :** 22 entrées de pneumologie + 29 chapitres de neurologie recensés depuis vos textes. Aucun de vos paquets Anki n’a encore été importé. Aucun item n’est déclaré à jour. Les sources de néphrologie, orthopédie, cancérologie et santé publique restent à ajouter. Ces 51 entrées ne constituent pas la liste nationale de tous les items EDN.
+**État initial :** 22 entrées de pneumologie + 29 chapitres de neurologie recensés depuis vos textes. Aucun de vos paquets Anki n’a encore été importé. Aucun item n’est déclaré à jour. Les inventaires d’objectifs de néphrologie, orthopédie, cancérologie et santé publique restent à ajouter. Ces 51 entrées ne constituent pas la liste nationale de tous les items EDN. Les quatre autres référentiels ont maintenant une [fiche bibliographique](../sources/README.md) ; leurs objectifs ne sont pas encore intégrés.
 
-## Périmètre pneumologie et neurologie : rangs A et B uniquement
+## Périmètre : rangs A et B uniquement dans chaque collège
 
-Pour ces **deux collèges**, la couverture et la mise à jour portent uniquement sur les connaissances de **rang A et B**. Le **rang C n’est pas compté** dans les objectifs à couvrir ni dans les objectifs conformes, et ne nécessite pas de mise à jour dans ce périmètre.
+Pour **chaque collège** du projet, la couverture et la mise à jour portent uniquement sur les connaissances de **rang A et B**. Le **rang C n’est pas compté** dans les objectifs à couvrir ni dans les objectifs conformes, et ne nécessite pas de mise à jour dans ce périmètre.
 
 La classification s’applique à **chaque connaissance dans le collège concerné**, jamais globalement à une carte. Une même note peut contenir un objectif C en pneumologie et un objectif B en neurologie, ou mélanger des informations de plusieurs rangs. **Ne supprimer, ne suspendre et ne modifier aucune carte à cause d’un classement C.** L’outil conserve les notes et les objectifs C pour la traçabilité.
 
 Si une ligne regroupe des connaissances de rangs différents, la séparer en plusieurs objectifs du registre, sans découper ni supprimer la carte Anki. Dans chaque objectif, sélectionner A, B, C ou « à déterminer » et renseigner le repère de la source qui justifie ce rang. Les tags Anki ou un rang écrit en texte libre ne remplacent pas cette confirmation. Un rang inconnu reste à clarifier ; il ne vaut ni A/B ni exclusion C. Un classement C sans justification ne permet pas de valider le chapitre.
 
-L’interface et les exports distinguent les objectifs A/B attendus et conformes, le C exclu et les rangs à clarifier. Un chapitre contenant seulement des objectifs C ne devient pas « vérifié A/B » : il faut établir la liste réelle de ses objectifs A/B. Les validations anciennes de ces deux collèges sont à reprendre, sans perdre les relectures ou les cartes. Les autres spécialités conservent leur périmètre précédent jusqu’à instruction explicite.
+L’interface et les exports distinguent les objectifs A/B attendus et conformes, le C exclu et les rangs à clarifier. Un chapitre contenant seulement des objectifs C ne devient pas « vérifié A/B » : il faut établir la liste réelle de ses objectifs A/B. Les validations enregistrées sous une ancienne politique sont à reprendre, sans perdre les relectures ou les cartes. Les règles du dépôt main imposent désormais cette politique A/B par défaut à tout collège ajouté ; la classification reste indépendante selon la source.
 
 ## Démarrer
 
@@ -50,7 +50,7 @@ Puis importer `inventaire.json` dans l’interface. Un import technique complet 
 
 1. **Identifier la source.** Ouvrir le site du collège, contrôler l’édition qui s’applique à votre session EDN, les éventuels errata et le périmètre rangs A/B/ECOS. Enregistrer l’URL officielle et l’édition. Le texte fourni n’établit pas à lui seul la dernière édition publiée.
 2. **Confirmer la correspondance.** Examiner les notes candidates et leurs tags ; contrôler le numéro dans la nomenclature de référence. Pour la neurologie, aucun numéro n’est deviné : vous confirmez la correspondance après lecture de la source. Un chapitre peut regrouper plusieurs items. `359` et `359 bis` restent distincts.
-3. **Lister les objectifs attendus.** Pour la pneumologie et la neurologie, recenser tous les objectifs A/B du chapitre et justifier séparément les exclusions C ; un rang inconnu est à clarifier. Pour les autres collèges, reprendre tous les objectifs du périmètre choisi, avec page/section/identifiant de connaissance et rang quand il est disponible. Une simple liste de titres ne constitue pas ce travail.
+3. **Lister les objectifs attendus.** Pour chaque collège, recenser tous les objectifs A/B du chapitre et justifier séparément les exclusions C ; un rang inconnu est à clarifier, avec page/section/identifiant de connaissance et rang quand il est disponible. Une simple liste de titres ne constitue pas ce travail.
 4. **Vérifier chacun.** Pour chaque objectif : indiquer le repère source, les identifiants des notes et le verdict. Vérifier en particulier les chiffres, seuils, algorithmes, diagnostics, traitements, contre-indications et changements d’édition. Ouvrir les cartes dans Anki pour les images, sons et schémas ; l’aperçu de l’outil est textuel.
 5. **Consigner la relecture.** Renseigner relecteur, date, justification et confirmation du périmètre exhaustif. Une couverture partielle ou un échantillon ne doit pas être présenté comme un chapitre entièrement vérifié. Une contradiction ou un objectif absent reste visible comme écart.
 6. **Partager la preuve.** Exporter le CSV pour un tableur et la sauvegarde JSON pour reprendre le travail ou le transmettre à un autre relecteur. Le CSV est une restitution ; la sauvegarde JSON conserve l’état complet.
@@ -103,7 +103,7 @@ Utiliser `null` tant que le numéro n’est pas vérifié. S’il est connu, le 
 
 Voir [les constats sourcés](constats-sources.md) et les [textes conservés](../data/sources). La documentation publique Anki EDN signale un tableau de mises à jour et le téléchargement via AnkiCollab ; elle ne contient pas les cartes. Certains tags de protection AnkiCollab peuvent empêcher des mises à jour locales. Une synchronisation réussie ne démontre donc pas l’actualité du contenu.
 
-Les accès directs au site C2SU et au dossier Drive étaient refusés par la politique réseau de la machine lors de la préparation. Les fichiers réels du Drive et les chapitres complets des collèges n’ont pas été audités. Les nombres initiaux sont des nombres de chapitres, et non des nombres de connaissances A/B. Aucun rang n’est déduit de ces seules listes. Ils proviennent exclusivement des textes fournis ; le dépôt documentaire public C2SU a été consulté au commit `fceb5bf186c9641bb978cc891c8c8c8a797fe289`.
+Les accès directs au site C2SU et au dossier Drive étaient refusés par la politique réseau de la machine lors de la préparation. Le Lisez-moi est désormais lu et résumé dans `sources/lisez-moi.md` ; les paquets Anki réels et les livres complets récents n’ont pas été audités. Les nombres initiaux sont des nombres de chapitres, et non des nombres de connaissances A/B. Aucun rang n’est déduit de ces seules listes. Ils proviennent exclusivement des textes fournis ; le dépôt documentaire public C2SU a été consulté au commit `fceb5bf186c9641bb978cc891c8c8c8a797fe289`.
 
 Le paquet déclare ne pas préparer aux ECOS, tandis que le texte CEP annonce des ajouts ECOS : le périmètre doit donc être documenté, sans prétendre couvrir automatiquement ces nouveautés.
 
@@ -125,4 +125,8 @@ Pour reconstruire la page autonome et l’archive depuis les sources : `python c
 
 ## Recherche des autres collèges et identification du Drive
 
-Le panneau « Sources, éditions et périmètre » contient maintenant les quatre recherches restantes et le lien du Drive dont il faut lire le « Lisez-moi Anki.pdf ». Ce sont des tâches **en attente**, pas des sources médicales validées. Les recherches s’ouvrent dans votre navigateur et peuvent être réalisées indépendamment de l’accès réseau de la machine de développement. Consulter aussi `docs/identite-paquets.md`. Pour appliquer cette mise à jour dans une interface déjà utilisée, sauvegarder vos données puis charger `data/references.json` avec « Charger un référentiel JSON ». Les correspondances et relectures existantes sont conservées ; ne pas réinitialiser votre navigateur.
+Le panneau « Sources, éditions et périmètre » contient les résultats des quatre recherches et le lien du Lisez-moi lu. Les éditions sont identifiées bibliographiquement ; les objectifs et cartes restent **à contrôler**, sans validation médicale présumée. Les liens s’ouvrent dans votre navigateur. Consulter aussi `docs/identite-paquets.md`. Pour appliquer cette mise à jour dans une interface déjà utilisée, sauvegarder vos données puis charger `data/references.json` avec « Charger un référentiel JSON ». Les correspondances et relectures existantes sont conservées ; ne pas réinitialiser votre navigateur.
+
+### Après ouverture du réseau
+
+Le blocage décrit historiquement ci-dessus est résolu. Le Lisez-moi du Drive est [lu et résumé](../sources/lisez-moi.md) et les quatre référentiels ont une fiche dans `sources/`. Cela ne certifie aucune carte médicale. Le panneau des recherches reflète ces résultats, en distinguant l’édition récente du contenu gratuit plus ancien.
