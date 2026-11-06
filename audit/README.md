@@ -20,13 +20,15 @@ python outils/apkg_distant.py "https://drive.usercontent.google.com/download?id=
 python outils/mea_extraire.py collection.anki21 --out local/mea/notes.csv
 # 2. Référentiel CEP 9e
 mkdir -p local/cep9-docx && (cd local/cep9-docx && xargs -n1 curl -sSLO < ../../references/cep9/urls.txt)
-sha256sum -c references/cep9/SHA256SUMS  # depuis local/cep9-docx
+(cd local/cep9-docx && sha256sum -c ../../references/cep9/SHA256SUMS)
 python outils/cep9_extraire.py local/cep9-docx --objectifs references/cep9/objectifs.csv --texte local/cep9
 ```
 
 `local/cep9/item-XXX.txt` contient le texte de l'item, chaque passage marqué `[A]`, `[B]`
 ou `[C]` d'après la couleur du CEP (bleu = B, vert = C). `local/mea/notes.csv` contient
 les notes du deck avec leurs numéros d'item. Ces deux fichiers restent en local.
+
+Pour lire un item : `python outils/comparer_item.py 205` (contenu A/B du CEP puis notes MEA).
 
 ## Lire un audit d'item
 
@@ -54,5 +56,7 @@ relecteur humain.
 | Item | Notes MEA | Statut |
 |---|---|---|
 | 204 Toux | 105 (+ 31 pédiatrie hors périmètre) | audité : 5 conformes · 1 partiel · 3 à mettre à jour · 1 à vérifier dans Anki |
+| 205 Hémoptysie | 71 | audité : 3 conformes · 1 partiel · 4 à mettre à jour |
+| 360 Pneumothorax | 79 | audité : 3 conformes · 2 partiels · 4 à mettre à jour · 2 à vérifier dans Anki |
 | 210 PID | 0 | non couvert (déclaré absent par l'auteur) |
 | autres | | à faire |
