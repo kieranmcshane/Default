@@ -23,7 +23,7 @@ def cep(item: str) -> None:
         ligne = re.sub(r"\[C\][^\[]*", "", ligne).replace("[A] ", "").strip()
         if not ligne or ligne in ("|", "| |") or "apparaissent en" in ligne:
             continue
-        print(ligne[:900])
+        print(ligne)
 
 
 def mea(item: str, exclure: list[str]) -> None:
@@ -33,15 +33,15 @@ def mea(item: str, exclure: list[str]) -> None:
             continue
         if any(e in r["paquets"] for e in exclure):
             continue
-        g = groupes.setdefault(r["verso"], {"nids": [], "q": [], "paquet": r["paquets"].split("::")[-1][:40]})
+        g = groupes.setdefault(r["verso"], {"nids": [], "q": [], "paquet": r["paquets"].split("::")[-1]})
         g["nids"].append(r["nid"])
-        g["q"].append(r["recto"].replace("\n", " ")[:160])
+        g["q"].append(r["recto"].replace("\n", " "))
     print(f"===== MEA item {item} : {sum(len(g['nids']) for g in groupes.values())} notes, {len(groupes)} versos =====")
     for verso, g in groupes.items():
         print(f"\n## [{g['paquet']}] nids {' '.join(g['nids'])}")
         for q in g["q"]:
             print("Q:", q)
-        print("R:", re.sub(r"\n+", " / ", verso)[:1800])
+        print("R:", re.sub(r"\n+", " / ", verso))
 
 
 def main() -> None:
